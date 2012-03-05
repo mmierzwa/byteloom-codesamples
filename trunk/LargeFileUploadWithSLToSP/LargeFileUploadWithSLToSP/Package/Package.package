@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="98e12a92-2f7c-4e2c-8251-20514e23fb72" solutionId="98e12a92-2f7c-4e2c-8251-20514e23fb72" resetWebServer="false" name="LargeFileUploadWithSLToSP" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="Telerik.Windows.RadUploadHandler.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\..\..\..\Program Files (x86)\Telerik\RadControls for Silverlight Q3 2011 SP1\Binaries\Silverlight\ServerSide\Telerik.Windows.RadUploadHandler.dll" />
+  </assemblies>
+  <features>
+    <featureReference itemId="0c2a689d-55ae-433f-907b-d040d1f01f57" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="1ef2f428-1cda-4383-8ca3-5e7ef802c502" />
+    <projectItemReference itemId="358711a8-1a8a-433a-a530-00cdbcf5a009" />
+  </projectItems>
+</package>

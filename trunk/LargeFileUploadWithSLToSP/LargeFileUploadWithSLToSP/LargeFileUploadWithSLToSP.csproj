@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB306803-6B13-4163-B7D7-FD337D8DC816}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LargeFileUploadWithSLToSP</RootNamespace>
+    <AssemblyName>LargeFileUploadWithSLToSP</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>No Activation</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+    <Reference Include="Telerik.Windows.RadUploadHandler, Version=2011.3.1220.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataModel\ContentTypes\LargeDocument\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2da81ddc-1a39-4f90-904d-2f4b7213610f}</SharePointProjectItemId>
+    </None>
+    <None Include="DataModel\Lists\LargeDocumentListTemplate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6c20d179-d1ef-4a30-a723-a1b0bda18b3f}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Main\Main.feature">
+      <FeatureId>{0c2a689d-55ae-433f-907b-d040d1f01f57}</FeatureId>
+    </None>
+    <None Include="Layouts\LargeFileUploadWithSLToSP\LibraryUploadHandler.ashx" />
+    <Compile Include="Layouts\LargeFileUploadWithSLToSP\LibraryUpload.aspx.cs">
+      <DependentUpon>LibraryUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\LargeFileUploadWithSLToSP\LibraryUpload.aspx.designer.cs">
+      <DependentUpon>LibraryUpload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\LargeFileUploadWithSLToSP\LibraryUploadHandler.ashx.cs">
+      <DependentUpon>LibraryUploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="UploadClient\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0645b4c-b52d-449a-95ce-8558e0420754}</SharePointProjectItemId>
+    </None>
+    <None Include="XSL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{358711a8-1a8a-433a-a530-00cdbcf5a009}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1ef2f428-1cda-4383-8ca3-5e7ef802c502}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{98e12a92-2f7c-4e2c-8251-20514e23fb72}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataModel\ContentTypes\LargeDocument\Elements.xml" />
+    <Content Include="DataModel\Lists\LargeDocumentListTemplate\EditDlg.htm" />
+    <Content Include="DataModel\Lists\LargeDocumentListTemplate\Elements.xml" />
+    <Content Include="DataModel\Lists\LargeDocumentListTemplate\FileDlg.htm" />
+    <Content Include="DataModel\Lists\LargeDocumentListTemplate\Repair.aspx" />
+    <Content Include="DataModel\Lists\LargeDocumentListTemplate\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DataModel\Lists\LargeDocumentListTemplate\Upload.aspx" />
+    <Content Include="Features\Main\Main.Template.xml">
+      <DependentUpon>Main.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\LargeFileUploadWithSLToSP\LibraryUpload.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\LargeFileUploadWithSLToSP\TempChunks\sample.txt" />
+    <Content Include="UploadClient\Elements.xml" />
+    <Content Include="UploadClient\UploadClient.xap" />
+    <Content Include="XSL\custom_views.xsl">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>
