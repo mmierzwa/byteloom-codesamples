@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <Module Name="UploadClient">
+        <File Path="UploadClient\UploadClient.xap" Url="UploadClient/UploadClient.xap" />
+    </Module>
+</Elements>

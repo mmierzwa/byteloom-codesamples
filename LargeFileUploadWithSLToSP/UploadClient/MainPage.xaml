@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="UploadClient.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:telerik="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+    mc:Ignorable="d" Height="363" Width="411">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <telerik:RadUpload
+            x:Name="RadUploadControl"
+            UploadServiceUrl="/_layouts/LargeFileUploadWithSLToSP/LibraryUploadHandler.ashx"
+            Filter="All files (*.*)|*.*"
+            FilterIndex="0"
+            IsAutomaticUpload="False"
+            OverwriteExistingFiles="True"
+            IsAppendFilesEnabled="True"
+            TargetFolder="TempChunks"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            MaxFileCount="1"
+            BufferSize="8192"
+            Margin="5,5,0,0" 
+            Width="401">
+        </telerik:RadUpload>
+        <CheckBox 
+            x:Name="NewVersionCheckBox" 
+            Margin="5,186,5,160" 
+            Width="400" Content="Add as new version to existing files" 
+            IsEnabled="True">
+        </CheckBox>
+        <TextBlock
+            Text="Version comments:" 
+            Margin="5,209,5,137" 
+            Width="400">
+        </TextBlock>
+        <TextBox 
+            x:Name="VersionCommentsTextBox"
+            Margin="5,232,5,5" 
+            TextWrapping="Wrap"
+            VerticalScrollBarVisibility="Visible">
+        </TextBox>
+    </Grid>
+</UserControl>

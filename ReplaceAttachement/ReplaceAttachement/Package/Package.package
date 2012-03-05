@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="196415d1-5d58-40af-8988-f05a5b85b707" solutionId="196415d1-5d58-40af-8988-f05a5b85b707" resetWebServer="false" name="ReplaceAttachement" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="ffc84f74-1034-4c5b-80d2-3cf555386e9c" />
+  </projectItems>
+</package>
